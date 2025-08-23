@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+Perfect 👍 Let’s extend your `README.md` with **GitHub Pages deployment instructions** so you can publish your portfolio live.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here’s the **final README.md** you can drop in:
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# 🚀 Dhaniyah Fadlisha – Personal Portfolio
 
-### `npm start`
+This is my personal **portfolio website**, built with **React (Create React App)**.
+It showcases my **skills, projects, and experience** as a Software Engineering student at **UTM Kuala Lumpur**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🌟 Features
 
-### `npm test`
+* 🎨 Modern, animated design with custom theme & VT323 monospace font
+* ✨ Smooth scrolling navigation (Home · About · Projects · Contact)
+* 💻 Featured projects:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * Bank Management System (Java OOP)
+  * Property Landing Page (HTML/CSS, responsive design)
+  * Interactive JavaScript Apps (Big Bang Game, Data Tables)
+* 📱 Responsive & mobile-friendly layout
+* 🔗 Direct links to **Email, LinkedIn, GitHub, and Phone**
+* 🖱️ Fun extras: animated gradient background, cursor follower, floating effects
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **React** (via Create React App)
+* **CSS3** with custom animations (grid drift, gradient background, scroll reveal)
+* **JavaScript (ES6+)**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📂 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+ ├── App.js
+ ├── Portfolio.jsx      # Main portfolio component
+ ├── Portfolio.css      # Styling and animations
+ ├── index.js           # CRA entry point
+ └── index.css
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Clone the repository
 
-## Learn More
+```bash
+git clone https://github.com/DFadlisha/your-portfolio.git
+cd your-portfolio
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Install dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+### 3. Run locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📦 Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+```
 
-### Advanced Configuration
+This bundles the app into a production-ready build in the `build/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🌐 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Option 1 — Deploy to **GitHub Pages**
 
-### `npm run build` fails to minify
+1. Install GitHub Pages package:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm install gh-pages --save-dev
+   ```
+
+2. Add these lines to your `package.json`:
+
+   ```json
+   {
+     "homepage": "https://DFadlisha.github.io/your-portfolio",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build"
+     }
+   }
+   ```
+
+   > Replace **`your-portfolio`** with the actual repository name.
+
+3. Deploy with:
+
+   ```bash
+   npm run deploy
+   ```
+
+4. Visit:
+
+   ```
+   https://DFadlisha.github.io/your-portfolio
+   ```
+
+---
+
+### Option 2 — Deploy to **Netlify / Vercel / Firebase**
+
+* **Netlify**: Drag & drop the `build/` folder to the Netlify dashboard.
+* **Vercel**: Import your repo and it will auto-detect CRA.
+* **Firebase Hosting**: Run `firebase init hosting` and deploy the `build/` folder.
+
+---
+
+## 👩‍💻 Author
+
+**Dhaniyah Fadlisha**
+
+* 📧 Email: [fadlishadhaniyah@gmail.com](mailto:fadlishadhaniyah@gmail.com)
+* 💼 LinkedIn: [linkedin.com/in/dhaniyahfadlisha](https://www.linkedin.com/in/dhaniyahfadlisha)
+* 🐙 GitHub: [github.com/DFadlisha](https://github.com/DFadlisha)
+
