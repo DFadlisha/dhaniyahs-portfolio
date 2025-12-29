@@ -78,31 +78,32 @@ const Portfolio = () => {
   }, []);
 
   // ===== Resume-driven content =====
-  const NAME = 'Dhaniyah Fadlisha'; // used in hero only
-  const TAGLINE = 'Software Engineering Student • UTM Kuala Lumpur';
+  const NAME = 'Dhaniyah Fadlisha';
+  const ROLE = 'Software Engineering Student';
+  const TAGLINE = 'Pixels that perform, code that connects.';
   const EMAIL = 'fadlishadhaniyah@gmail.com';
   const PHONE = '+60 13-713 8266';
   const LINKEDIN = 'https://www.linkedin.com/in/dhaniyahfadlisha';
   const GITHUB = 'https://github.com/DFadlisha';
 
   const skills = {
-    core: ['Java', 'JavaScript', 'C++', 'C#', 'PHP', 'Python', 'HTML', 'CSS'],
-    frameworks: ['React.js', 'Node.js', 'Flutter', 'Git', 'GitHub', 'VS Code', 'MySQL'],
-    soft: ['Problem-solving', 'Team collaboration', 'Customer service', 'Cross-department communication']
+    "Front-end": ['React.js', 'JavaScript', 'HTML', 'CSS', 'Flutter', 'Tailwind CSS', 'Bootstrap'],
+    "Back-end": ['Java', 'Node.js', 'PHP', 'Python', 'MySQL', 'C++', 'C#'],
+    "Tools": ['Git', 'GitHub', 'VS Code', 'Figma']
   };
 
   const education = [
     {
-      school: 'Universiti Teknologi Malaysia (UTM), Kuala Lumpur',
+      school: 'Universiti Teknologi Malaysia (UTM)',
       program: 'B.CompSc (Software Engineering) with Honours',
-      meta: 'Expected Oct 2026 • CGPA 3.17',
-      coursework: ['Software Engineering', 'OOP', 'Data Structures', 'Web & Mobile Development', 'Database Systems']
+      date: 'Expected Oct 2026',
+      desc: 'CGPA 3.17 • Core: Software Engineering, OOP, Data Structures'
     },
     {
-      school: 'Kolej Vokasional Datuk Seri Mohd Zin, Melaka',
+      school: 'Kolej Vokasional Datuk Seri Mohd Zin',
       program: 'Diploma in Information Technology',
-      meta: 'Graduated Sept 2021 • CGPA 3.41',
-      coursework: ['Computer System Maintenance', 'Network Security', 'Programming Languages', 'Database Fundamentals']
+      date: 'Graduated Sept 2021',
+      desc: 'CGPA 3.41 • Dean\'s List Awardee'
     }
   ];
 
@@ -110,44 +111,46 @@ const Portfolio = () => {
     {
       role: 'Technical Support Intern',
       company: 'Ishan Tech (M) Sdn Bhd',
-      period: 'Mar 2021 – Jul 2021',
-      bullets: [
-        'Supported clients on ESET antivirus solutions and troubleshooting',
-        'Collaborated with marketing & PM teams on new service initiatives',
-        'Improved equipment maintenance protocols and safety standards',
-        'Sharpened problem-solving & client communication through direct support'
-      ]
+      date: 'Mar 2021 – Jul 2021',
+      desc: 'Provided technical support for ESET antivirus, troubleshot client issues, and collaborated with marketing teams.'
+    },
+    {
+      role: 'Freelance Developer',
+      company: 'Self-Employed',
+      date: '2023 - Present',
+      desc: 'Developed web solutions and interactive applications for various academic and personal projects.'
     }
   ];
 
   const projects = [
     {
-      title: 'Bank Management System',
-      description:
-        'Java OOP project implementing encapsulation, inheritance, and polymorphism with a console-driven backend for data management (July 2024).',
-      tags: ['Java', 'OOP', 'Encapsulation', 'Inheritance', 'Polymorphism'],
+      title: 'MI-NES Payroll System',
+      description: 'Comprehensive payroll management system built with PHP and Supabase. Features PDF generation, overtime calculation, and PCB tax integration.',
+      tags: ['PHP', 'Supabase', 'MySQL', 'TCPDF'],
+      link: 'https://github.com/DFadlisha/payroll-system',
       delay: 0
     },
     {
-      title: 'Property Landing Page',
-      description: 'Responsive HTML/CSS property showcase with clean UI and cross-device compatibility (updated recently).',
-      tags: ['HTML', 'CSS', 'Responsive Design'],
+      title: 'Queue System',
+      description: 'Real-time queue tracking system using Vite and polling. Integrates with Upstash Redis for state syncing across devices without a custom backend.',
+      tags: ['Vite', 'React', 'Redis', 'Vercel'],
+      link: 'https://github.com/DFadlisha/Queue-System',
       delay: 150
     },
     {
-      title: 'Interactive JavaScript Apps',
-      description:
-        'Big Bang mini-game plus a Data Tables system with sorting, filtering, and search using modern DOM/ES6 patterns.',
-      tags: ['JavaScript', 'DOM', 'ES6'],
+      title: 'Sortmaster Mobile',
+      description: 'Mobile sorting application built with React, TypeScript, and Tailwind CSS. Features a modern UI using shadcn-ui and Lovable integration.',
+      tags: ['React Native', 'TypeScript', 'Tailwind CSS', 'Shadcn'],
+      link: 'https://github.com/DFadlisha/sortmaster-mobile',
       delay: 300
     }
   ];
 
   const contactLinks = [
-    { label: 'Email', icon: '📧', href: `mailto:${EMAIL}`, delay: 100 },
-    { label: 'LinkedIn', icon: '💼', href: LINKEDIN, delay: 200 },
-    { label: 'GitHub', icon: '🐙', href: GITHUB, delay: 250 },
-    { label: 'Phone', icon: '📞', href: `tel:${PHONE.replace(/\s|-/g, '')}`, delay: 300 }
+    { label: 'Email', icon: '📧', href: `mailto:${EMAIL}` },
+    { label: 'LinkedIn', icon: '💼', href: LINKEDIN },
+    { label: 'GitHub', icon: '🐙', href: GITHUB },
+    { label: 'Phone', icon: '📞', href: `tel:${PHONE.replace(/\s|-/g, '')}` }
   ];
 
   if (isLoading) {
@@ -163,7 +166,6 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
-      {/* Animated Background Layers */}
       <div className="bg-animated" aria-hidden="true"></div>
       <div className="bg-grid" aria-hidden="true"></div>
 
@@ -173,11 +175,11 @@ const Portfolio = () => {
         style={{ transform: `translate(${mousePosition.x - 10}px, ${mousePosition.y - 10}px)` }}
       ></div>
 
-      {/* Centered Navigation (name removed) */}
+      {/* Navbar */}
       <nav className={`navbar ${activeSection !== 'home' ? 'scrolled' : ''}`}>
         <div className="nav-container center-only">
           <ul className="nav-links center-nav">
-            {['home', 'about', 'projects', 'contact'].map((section) => (
+            {['home', 'about', 'services', 'projects', 'contact'].map((section) => (
               <li key={section}>
                 <button
                   onClick={() => scrollToSection(section)}
@@ -192,80 +194,121 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero */}
-      <section id="home" className="hero">
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="hero-title">
-              <span className="title-line">Hello, I'm</span>
-              <span className="title-line highlight">{NAME}</span>
-            </h1>
-            <p className="hero-subtitle">{TAGLINE}</p>
-            <button className="cta-button" onClick={() => scrollToSection('projects')}>
-              <span>View My Work</span>
-              <div className="button-shine"></div>
-            </button>
-          </div>
-        </div>
-        <div className="floating-elements">
-          <div className="float-element" style={{ '--delay': '0s' }}>✨</div>
-          <div className="float-element" style={{ '--delay': '2s' }}>💫</div>
-          <div className="float-element" style={{ '--delay': '4s' }}>⭐</div>
+      <section id="home" className="hero-section center-text">
+        <div className="container">
+          <h1 className="hero-title">
+            Hey, I am <span className="highlight">{NAME}</span> <br />
+            {TAGLINE}
+          </h1>
+          <button className="cta-button" onClick={() => scrollToSection('about')}>
+            <span>Read More</span>
+          </button>
         </div>
       </section>
 
-      {/* About */}
+      {/* Why Hire Me / About */}
       <section id="about" className={`section ${isVisible.about ? 'visible' : ''}`}>
         <div className="container">
-          <h2 className="section-title">About Me</h2>
-          <div className="about-content">
-            <div className="about-image">
-              <div className="image-placeholder">
-                <span className="emoji">👋</span>
-                <div className="image-glow"></div>
-              </div>
+          <h2 className="section-title">Why hire me for your next project?</h2>
+          <div className="hire-me-grid">
+            <div className="profile-image-container">
+              <img src="/profile.jpg" alt="Profile" className="profile-img" />
             </div>
-            <div className="about-text">
-              <p className="text-reveal">
-                Motivated third-year Software Engineering student seeking an internship to apply skills in Java, JavaScript, React.js, and Flutter while gaining hands-on experience and contributing in a collaborative environment.
+            <div className="hire-me-content">
+              <p className="summary-text">
+                I am a passionate <strong>{ROLE}</strong> with a strong foundation in computer science principles.
+                With experience in both academic and practical software development, I build efficient,
+                user-friendly solutions. I am eager to contribute my skills in full-stack development
+                to create impactful digital experiences.
               </p>
 
-              <div className="quick-cards">
-                <div className="qcard">
-                  <h4>Education</h4>
-                  {education.map((ed) => (
-                    <div key={ed.school} className="qitem">
-                      <strong>{ed.school}</strong>
-                      <div>{ed.program}</div>
-                      <div className="muted">{ed.meta}</div>
-                    </div>
-                  ))}
+              <div className="stats-row">
+                <div className="stat-box">
+                  <span className="stat-num">3+</span>
+                  <span className="stat-label">Years Learning</span>
                 </div>
-                <div className="qcard">
-                  <h4>Experience</h4>
-                  {experience.map((xp) => (
-                    <div key={xp.company} className="qitem">
-                      <strong>
-                        {xp.role} · {xp.company}
-                      </strong>
-                      <div className="muted">{xp.period}</div>
-                      <ul>
-                        {xp.bullets.map((b, i) => (
-                          <li key={i}>{b}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                <div className="stat-box">
+                  <span className="stat-num">10+</span>
+                  <span className="stat-label">Projects Completed</span>
                 </div>
               </div>
 
-              {/* Skills */}
-              <div className="skills">
-                {[...skills.core, ...skills.frameworks].map((skill, index) => (
-                  <span key={skill} className="skill-tag" style={{ '--delay': `${0.2 + index * 0.06}s` }}>
-                    {skill}
-                  </span>
+              <div className="action-buttons">
+                <button className="btn-secondary" onClick={() => scrollToSection('contact')}>Contact Me</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Journey (Education & Experience) */}
+      <section id="services" className={`section ${isVisible.services ? 'visible' : ''}`}>
+        <div className="container">
+          <h2 className="section-title">My Academic and Professional Journey</h2>
+          <div className="journey-grid">
+
+            {/* Education Column */}
+            <div className="journey-column">
+              <h3 className="column-title">Education</h3>
+              <div className="timeline-cards">
+                {education.map((edu, idx) => (
+                  <div key={idx} className="timeline-card">
+                    <div className="card-badge">{edu.date}</div>
+                    <h4>{edu.program}</h4>
+                    <h5>{edu.school}</h5>
+                    <p>{edu.desc}</p>
+                  </div>
                 ))}
               </div>
+            </div>
+
+            {/* Experience Column */}
+            <div className="journey-column">
+              <h3 className="column-title">Professional Experience</h3>
+              <div className="timeline-cards">
+                {experience.map((exp, idx) => (
+                  <div key={idx} className="timeline-card">
+                    <div className="card-badge">{exp.date}</div>
+                    <h4>{exp.role}</h4>
+                    <h5>{exp.company}</h5>
+                    <p>{exp.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="skills-section" className="section">
+        <div className="container">
+          <h2 className="section-title">Tools and Skills</h2>
+
+          <div className="skills-category-tabs">
+            {Object.keys(skills).map(cat => (
+              <span key={cat} className="category-pill">{cat}</span>
+            ))}
+          </div>
+
+          <div className="skills-grid-visual">
+            <div className="skills-list">
+              {Object.entries(skills).map(([category, items]) => (
+                <div key={category} className="skill-group">
+                  <h4>{category}</h4>
+                  {items.map(skill => (
+                    <div key={skill} className="skill-bar-container">
+                      <div className="skill-info">
+                        <span>{skill}</span>
+                      </div>
+                      <div className="progress-bar">
+                        <div className="progress-fill" style={{ width: `${Math.floor(Math.random() * 20 + 75)}%` }}></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -276,21 +319,21 @@ const Portfolio = () => {
         <div className="container">
           <h2 className="section-title">Featured Projects</h2>
           <div className="projects-grid">
-            {projects.map((project) => (
-              <div key={project.title} className="project-card" style={{ '--delay': `${project.delay}ms` }}>
-                <div className="card-content">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="project-tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+            {projects.map((project, idx) => (
+              <a
+                key={idx}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
                 </div>
-                <div className="card-hover-effect"></div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -299,35 +342,19 @@ const Portfolio = () => {
       {/* Contact */}
       <section id="contact" className={`section ${isVisible.contact ? 'visible' : ''}`}>
         <div className="container">
-          <div className="contact-content">
-            <h2 className="section-title">Let's Work Together</h2>
-            <p className="contact-description">
-              I’m open to internships and collaborations. Reach out via email, GitHub, or LinkedIn, and let’s create something meaningful.
-            </p>
-
-            <div className="contact-links">
-              {contactLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="contact-link"
-                  style={{ '--delay': `${link.delay}ms` }}
-                  target={link.href.startsWith('http') ? '_blank' : undefined}
-                  rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-                >
-                  <span className="icon">{link.icon}</span>
-                  <span className="label">{link.label}</span>
-                  <div className="link-glow"></div>
-                </a>
-              ))}
-            </div>
+          <h2 className="section-title">Get in Touch</h2>
+          <div className="contact-links center-row">
+            {contactLinks.map((link, idx) => (
+              <a key={idx} href={link.href} className="contact-pill">
+                <span>{link.icon}</span> {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} {NAME}. Crafted with care and attention to detail.</p>
+        <p>&copy; {new Date().getFullYear()} {NAME}. All Rights Reserved.</p>
       </footer>
     </div>
   );
