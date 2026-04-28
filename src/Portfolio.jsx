@@ -78,7 +78,6 @@ const Portfolio = () => {
   }, []);
 
   // ===== Resume-driven content =====
-  // ===== Resume-driven content =====
   const NAME = 'Nurdhaniyah Fadlisha Binti Hasnorfadli';
   const ROLE = 'Software Engineering Student';
   const TAGLINE = 'Building scalable web applications and database-driven systems.';
@@ -115,7 +114,7 @@ const Portfolio = () => {
       role: 'Software Engineering Intern',
       company: 'Network Solution Sdn Bhd',
       date: 'Oct 2025 – Mar 2026',
-      desc: 'Developed a Payroll System (PHP) and a Quality Control System Report mobile app (Dart/Flutter).'
+      desc: 'Developed the SplitUp App (Flutter/Firebase) and a Quality Control System Report mobile app (Dart/Flutter).'
     },
     {
       role: 'F&B Crew (Part-Time)',
@@ -158,7 +157,7 @@ const Portfolio = () => {
       title: 'SplitUp App',
       description: 'Group bill-splitting mobile application. Simplifies shared expenses with real-time updates.',
       tags: ['Flutter', 'Firebase'],
-      link: 'https://github.com/DFadlisha/SplitUp-App',
+      link: 'https://github.com/DFadlisha/SettleUp',
       delay: 300
     },
     {
@@ -228,6 +227,7 @@ const Portfolio = () => {
         <div className="container">
           <h1 className="hero-title">
             Hey, I am <span className="highlight">{NAME}</span> <br />
+            {ROLE} <br />
             {TAGLINE}
           </h1>
           <button className="cta-button" onClick={() => scrollToSection('about')}>
@@ -272,7 +272,7 @@ const Portfolio = () => {
       </section>
 
       {/* Journey (Education & Experience) */}
-      <section id="journey" className={`section ${isVisible.services ? 'visible' : ''}`}>
+      <section id="journey" className={`section ${isVisible.journey ? 'visible' : ''}`}>
         <div className="container">
           <h2 className="section-title">My Academic and Professional Journey</h2>
           <div className="journey-grid">
@@ -312,7 +312,7 @@ const Portfolio = () => {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="section">
+      <section id="skills" className={`section ${isVisible.skills ? 'visible' : ''}`}>
         <div className="container">
           <h2 className="section-title">Tools and Skills</h2>
 
@@ -371,7 +371,7 @@ const Portfolio = () => {
       </section>
 
       {/* Certifications */}
-      <section id="certifications" className="section">
+      <section id="certifications" className={`section ${isVisible.certifications ? 'visible' : ''}`}>
         <div className="container">
           <h2 className="section-title">Certifications</h2>
           <div className="certifications-list center-row">
