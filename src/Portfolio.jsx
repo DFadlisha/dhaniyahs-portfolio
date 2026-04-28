@@ -114,7 +114,7 @@ const Portfolio = () => {
       role: 'Software Engineering Intern',
       company: 'Network Solution Sdn Bhd',
       date: 'Oct 2025 – Mar 2026',
-      desc: 'Developed the SplitUp App (Flutter/Firebase) and a Quality Control System Report mobile app (Dart/Flutter).'
+      desc: 'Developed a Payroll System (PHP) and a Quality Control System Report mobile app (Dart/Flutter).'
     },
     {
       role: 'F&B Crew (Part-Time)',
@@ -154,10 +154,10 @@ const Portfolio = () => {
       delay: 200
     },
     {
-      title: 'SplitUp App',
-      description: 'Group bill-splitting mobile application. Simplifies shared expenses with real-time updates.',
-      tags: ['Flutter', 'Firebase'],
-      link: 'https://github.com/DFadlisha/SettleUp',
+      title: 'MI-NES Payroll System',
+      description: 'Comprehensive payroll management system built with PHP and Supabase. Features PDF generation, overtime calculation, and PCB tax integration.',
+      tags: ['PHP', 'Supabase', 'MySQL', 'TCPDF'],
+      link: 'https://github.com/DFadlisha/payroll-system',
       delay: 300
     },
     {
