@@ -148,10 +148,10 @@ const Portfolio = () => {
       delay: 100
     },
     {
-      title: 'AchievTrack',
-      description: 'Academic achievement platform for 200+ students. Streamlines tracking and reporting of student progress.',
-      tags: ['React', 'TypeScript', 'Supabase'],
-      link: 'https://github.com/DFadlisha/AchievTrack',
+      title: 'Quality Control System Report',
+      description: 'Mobile application built for real-time inspection tracking and quality control reporting at construction or industrial sites.',
+      tags: ['Dart', 'Flutter', 'Mobile'],
+      link: 'https://github.com/DFadlisha/Quality-Control-System-Report',
       delay: 200
     },
     {
